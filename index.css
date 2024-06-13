@@ -10,6 +10,7 @@ body {
 }
 
 .backdrop {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,6 +20,7 @@ body {
 }
 
 .player-modal {
+  display: none;
   position: fixed;
   text-align: center;
   background-color: var(--color-others);
@@ -69,14 +71,14 @@ header h1 {
   padding-top: 10px;
   padding-bottom: 10px;
   color: var(--color-headings);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 header p {
   margin: 0;
   padding-bottom: 20px;
   color: var(--color-others);
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 
 .player-naming-section {
@@ -87,9 +89,13 @@ header p {
   list-style: none;
   display: flex;
   text-align: center;
+  width: 100%;
   justify-content: center;
-  margin: 0 auto 0;
   padding-inline-start: 0;
+}
+
+.player-naming-card li {
+  width: 50%;
 }
 
 .player-naming-card .player-1,
@@ -101,13 +107,13 @@ header p {
   box-shadow: 0 4px 8px;
 }
 
-.player-naming-card h3 {
-  font-size: 1rem;
+.player-naming-section h3 {
+  font-size: 0.5rem;
   color: var(--color-headings);
 }
 
-.player-naming-card h2 {
-  font-size: 2rem;
+.player-naming-section h2 {
+  font-size: 1rem;
   font-weight: bold;
   color: var(--color-others);
 }
@@ -115,7 +121,7 @@ header p {
 .player-naming-card button {
   background-color: transparent;
   border: 0;
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: var(--color-headings);
   cursor: pointer;
 }
@@ -128,7 +134,7 @@ header p {
   background-color: var(--color-backgroud);
   border: 0;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: var(--color-others);
   margin: 0;
   padding: 10px 30px;
@@ -141,6 +147,13 @@ header p {
 }
 
 @media (min-width: 850px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+
   .player-modal {
     left: 25%;
     right: 25%;
@@ -149,5 +162,46 @@ header p {
   aside form input {
     width: 60%;
     box-sizing: border-box;
+  }
+
+  .player-naming-card li {
+    width: 40%;
+  }
+
+  .player-naming-card button {
+    font-size: 1rem;
+  }
+
+  .player-modal h2 {
+    margin: 0;
+    color: var(--color-backgroud);
+    font-size: 1rem;
+  }
+
+  .player-naming-section h2 {
+    font-size: 2rem;
+  }
+
+  .player-naming-section h3 {
+    font-size: 1rem;
+  }
+
+  aside form label {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .player-naming-card li {
+    width: 30%;
+  }
+}
+@media (min-width: 1500px) {
+  .player-naming-card li {
+    width: 20%;
   }
 }
