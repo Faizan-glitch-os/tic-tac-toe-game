@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <aside class="backdrop"></aside>
     <header>
       <h1>Tic Tac Toe</h1>
       <p>Built with HTML, CSS and JavaScript</p>
     </header>
     <main>
+      <aside class="player-modal">
+        <h2>Player-1</h2>
+        <form>
+          <label for="player-1-name">Enter your name</label
+          ><input type="text" id="player-1-name" />
+        </form>
+        <div class="player-modal-btns">
+          <button class="btn player-modal-btns">Cancel</button>
+          <button class="btn player-modal-btns">Okay</button>
+        </div>
+      </aside>
       <section class="player-naming-section">
         <ul class="player-naming-card">
           <li>
@@ -32,7 +44,7 @@
             </article>
           </li>
         </ul>
-        <button class="start-game-btn">Start Game!</button>
+        <button class="btn">Start Game!</button>
       </section>
     </main>
   </body>
