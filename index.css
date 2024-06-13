@@ -1,0 +1,90 @@
+html {
+  --color-backgroud: rgb(51, 48, 48);
+  --color-headings: rgb(133, 125, 125);
+  --color-others: rgb(206, 195, 195);
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: var(--color-backgroud);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--color-headings);
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0;
+  padding-bottom: 20px;
+  color: var(--color-others);
+  font-size: 1rem;
+}
+
+.player-naming-section {
+  text-align: center;
+}
+
+.player-naming-card {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto 0;
+  padding-inline-start: 0;
+}
+
+.player-naming-card .player-1,
+.player-2 {
+  background-color: var(--color-backgroud);
+  margin: 20px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px;
+}
+
+.player-naming-card h3 {
+  font-size: 1rem;
+  color: var(--color-headings);
+}
+
+.player-naming-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-others);
+}
+
+.player-naming-card button {
+  background-color: transparent;
+  border: 0;
+  font-size: 1rem;
+  color: var(--color-headings);
+  cursor: pointer;
+}
+
+.player-naming-card button:hover {
+  color: var(--color-others);
+}
+
+.start-game-btn {
+  background-color: var(--color-backgroud);
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--color-others);
+  margin: 0;
+  padding: 10px 30px;
+}
+
+.start-game-btn:hover {
+  background-color: var(--color-headings);
+  color: var(--color-backgroud);
+  cursor: pointer;
+}
