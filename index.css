@@ -3,10 +3,28 @@ html {
   --color-headings: rgb(133, 125, 125);
   --color-others: rgb(206, 195, 195);
   --color-backdrop: rgba(51, 48, 48, 0.8);
+
+  --font-h1: 1.5rem;
+  --font-h2: 1.3rem;
+  --font-h3: 1rem;
+  --font-p: 0.8rem;
 }
 
 body {
   margin: 0;
+}
+
+body h1 {
+  font-size: var(--font-h1);
+}
+body h2 {
+  font-size: var(--font-h2);
+}
+body h3 {
+  font-size: var(--font-h3);
+}
+body p {
+  font-size: var(--font-p);
 }
 
 .backdrop {
@@ -33,7 +51,6 @@ body {
 .player-modal h2 {
   margin: 0;
   color: var(--color-backgroud);
-  font-size: 2rem;
 }
 
 aside form {
@@ -41,7 +58,7 @@ aside form {
 }
 
 aside form label {
-  font-size: 1.2rem;
+  font-size: var(--font-h3);
   color: var(--color-backdrop);
 }
 
@@ -52,7 +69,7 @@ aside form input {
   padding: 10px 5px;
   border: 1px solid rgb(51, 48, 48);
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: var(--font-p);
   width: 100%;
   box-sizing: border-box;
 }
@@ -71,14 +88,12 @@ header h1 {
   padding-top: 10px;
   padding-bottom: 10px;
   color: var(--color-headings);
-  font-size: 1.5rem;
 }
 
 header p {
   margin: 0;
   padding-bottom: 20px;
   color: var(--color-others);
-  font-size: 0.5rem;
 }
 
 .player-naming-section {
@@ -105,23 +120,27 @@ header p {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .player-naming-section h3 {
-  font-size: 0.5rem;
   color: var(--color-headings);
+  margin: 0;
 }
 
 .player-naming-section h2 {
-  font-size: 1rem;
   font-weight: bold;
   color: var(--color-others);
+  margin: 0;
 }
 
 .player-naming-card button {
   background-color: transparent;
   border: 0;
-  font-size: 0.5rem;
+  font-size: var(--font-p);
   color: var(--color-headings);
   cursor: pointer;
 }
@@ -134,10 +153,14 @@ header p {
   background-color: var(--color-backgroud);
   border: 0;
   border-radius: 5px;
-  font-size: 0.5rem;
+  font-size: var(--font-p);
   color: var(--color-others);
   margin: 0;
   padding: 10px 30px;
+}
+
+.btn.start-game {
+  margin-top: 10px;
 }
 
 .btn:hover {
@@ -146,12 +169,36 @@ header p {
   cursor: pointer;
 }
 
+.game-status {
+  background-color: var(--color-backgroud);
+  text-align: center;
+  margin: 20px 5%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.game-status p {
+  color: var(--color-others);
+}
+
+.game-status .winner-name {
+  font-size: var(--font-h1);
+  color: var(--color-others);
+  text-shadow: 2px 4px 10px var(--color-others);
+}
+
 @media (min-width: 850px) {
-  header h1 {
-    font-size: 2.5rem;
+  body h1 {
+    font-size: calc(var(--font-h1) * 1.5);
   }
-  header p {
-    font-size: 1rem;
+  body h2 {
+    font-size: calc(var(--font-h2) * 1.5);
+  }
+  body h3 {
+    font-size: calc(var(--font-h3) * 1.5);
+  }
+  body p {
+    font-size: calc(var(--font-p) * 1.5);
   }
 
   .player-modal {
@@ -162,6 +209,7 @@ header p {
   aside form input {
     width: 60%;
     box-sizing: border-box;
+    font-size: calc(var(--font-p) * 1.5);
   }
 
   .player-naming-card li {
@@ -169,35 +217,26 @@ header p {
   }
 
   .player-naming-card button {
-    font-size: 1rem;
-  }
-
-  .player-modal h2 {
-    margin: 0;
-    color: var(--color-backgroud);
-    font-size: 1rem;
-  }
-
-  .player-naming-section h2 {
-    font-size: 2rem;
-  }
-
-  .player-naming-section h3 {
-    font-size: 1rem;
+    font-size: calc(var(--font-p) * 1.5);
   }
 
   aside form label {
-    font-size: 1.2rem;
+    font-size: calc(var(--font-h3) * 1.5);
   }
 
   .btn {
-    font-size: 1rem;
+    font-size: calc(var(--font-p) * 1.5);
   }
 }
 
 @media (min-width: 1100px) {
   .player-naming-card li {
     width: 30%;
+  }
+  .game-status {
+    background-color: var(--color-backgroud);
+    text-align: center;
+    margin: 30px 20%;
   }
 }
 @media (min-width: 1500px) {
