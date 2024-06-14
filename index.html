@@ -6,6 +6,7 @@
     <title>Tic Tac Toe</title>
 
     <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <aside class="backdrop"></aside>
@@ -17,13 +18,14 @@
       <aside class="player-modal">
         <h2>Player-1</h2>
         <form>
-          <label for="player-1-name">Enter your name</label
-          ><input type="text" id="player-1-name" />
+          <label for="player-name">Enter your name</label
+          ><input type="text" name="player-name" id="player-name" required />
+          <p class="error-msg">Please enter a valid name</p>
+          <div class="player-modal-btns">
+            <button type="reset" class="btn player-modal-btns">Cancel</button>
+            <button type="submit" class="btn player-modal-btns">Okay</button>
+          </div>
         </form>
-        <div class="player-modal-btns">
-          <button class="btn player-modal-btns">Cancel</button>
-          <button class="btn player-modal-btns">Okay</button>
-        </div>
       </aside>
       <section class="player-naming-section">
         <ul class="player-naming-card">
@@ -32,7 +34,7 @@
               <h3>Player-1</h3>
               <h2>f</h2>
               <h2>O</h2>
-              <button>Rename</button>
+              <button class="rename-player1-btn">Rename</button>
             </article>
           </li>
           <li>
@@ -40,7 +42,7 @@
               <h3>Player-1</h3>
               <h2>Faizan Ahmad</h2>
               <h2>X</h2>
-              <button>Rename</button>
+              <button class="rename-player1-btn">Rename</button>
             </article>
           </li>
         </ul>

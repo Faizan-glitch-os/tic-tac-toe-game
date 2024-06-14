@@ -66,6 +66,9 @@ aside form label {
   font-size: var(--font-h3);
   color: var(--color-backdrop);
 }
+.error-label {
+  color: rgb(107, 42, 42);
+}
 
 aside form input {
   display: block;
@@ -78,7 +81,15 @@ aside form input {
   width: 100%;
   box-sizing: border-box;
 }
-
+.error-input {
+  background-color: rgb(155, 88, 88);
+  color: rgb(107, 42, 42);
+}
+.error-msg {
+  display: none;
+  font-size: var(--font-p);
+  color: rgb(107, 42, 42);
+}
 .player-modal .player-modal-btns {
   margin: 2px;
 }
