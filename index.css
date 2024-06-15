@@ -199,6 +199,7 @@ header p {
 }
 
 .game {
+  display: none;
   text-align: center;
   padding-top: 20px;
 }
@@ -233,6 +234,7 @@ header p {
 }
 .game-board li.disabled {
   background-color: var(--color-headings);
+  cursor: default;
 }
 
 @media (min-width: 850px) {
