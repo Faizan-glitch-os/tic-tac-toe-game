@@ -62,13 +62,33 @@ function GetPlayerName(event) {
   }
 }
 
+function ResetGame() {
+  activePlayer = 0;
+  rounds = 1;
+  gameOver = false;
+  gameTile.textContent = "";
+  gameStatus.style.display = "none";
+
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+      gameData[i][j] = 0;
+    }
+  }
+
+  for (i = 0; i < 9; i++) {
+    gameTile[i].textContent = "";
+    gameTile[i].classList.remove("disabled");
+  }
+}
+
 function ClickToStartGame() {
   if (playerData[0].name === "" || playerData[1].name === "") {
     alert("Please enter Player Names first");
     return;
   }
-  game.style.display = "block";
 
+  ResetGame();
+  game.style.display = "block";
   activePlayerName.textContent = playerData[activePlayer].name;
 }
 
